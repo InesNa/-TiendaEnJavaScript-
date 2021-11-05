@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VENTAS</title>
+    <link rel="stylesheet" href="css/css.css" rel>
+    <script src="JS/SCRPT.JS" ></script>
+  </head>
+
+  <body onload="mueveReloj()">
+    
+    <div class="header">
+      <h1>TIENDA BETO</h1>
+      <img src="img/tienda.jpg">
+    </div>
+    
+    <div class="topnav">
+      <a href="index.html">INICIO</a>
+      <a href="index.html">Productos</a>
+      <a href="index.html">Ubicacion</a>
+    </div>
+    
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <form name="form_reloj" > 
+            <input type="text" name="reloj" size="10" id="reloj"> 
+          </form>
+          
+          <script>
+          function textoFecha(fecha){
+            var numDiaSem = fecha.getDay(); 
+            var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+            var diaLetras = diasSemana[fecha.getDay()];   
+            var meses = new Array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+            var mesLetras = meses[fecha.getMonth()]; 
+            var diaMes = (fecha.getDate());  
+            var anho = fecha.getFullYear();  
+            var devolver = "Hoy es " + diaLetras+ ", " + diaMes + " de " + mesLetras + " de " + anho ;
+            return devolver;
+            }
+            var fecha = new Date();  
+            document.write(textoFecha(fecha)); 
+            </script>
+            
+            <h2>VENTA DE PRODUCTOS  </h2>
+            <hr>
+          </div>
+          
+          <div class="card">
+            <p>Aqui encontraras productos de calidad y a un buen precio</p>
+          </div>
+        </div>
+        
+        <div class="rightcolumn">
+          <div class="card">
+            <h2 class="noticias">Noticias</h2>
+          </div>
+          
+          <div class="card">
+            <h3>conocenos</h3>
+            <div class="fakeimg"><a href="https://www.instagram.com/?hl=es-la">INSTRAGRAM</a></div>
+            <div class="fakeimg"><a href="https://es-la.facebook.com/">Facebook</a></div>
+            <div class="fakeimg"><a href="https://www.instagram.com/?hl=es-la">tuiter</a></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer">
+        <p style="text-align:center;">Contacto:5534232235</p>
+      </div>
+    </div>
+  </body>
+  </html>
